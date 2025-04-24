@@ -1,0 +1,92 @@
+/* ===== 회원가입 섹션 ===== */
+.signup-section {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid var(--soft-gray);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* ===== 타이틀 ===== */
+.form-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--text-color);
+}
+
+/* ===== 폼 ===== */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.signup-form label {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"] {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid var(--soft-gray);
+  border-radius: 6px;
+  background-color: #f9fafa;
+  transition: border-color 0.3s;
+}
+
+.signup-form input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+/* ===== 라디오 버튼 ===== */
+.color-choice {
+  border: none;
+  padding: 0;
+  margin: 1.2rem 0 0.5rem;
+}
+
+.color-choice legend {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.color-choice label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}
+
+.color-choice input[type="radio"] {
+  margin-right: 0.5rem;
+  accent-color: var(--primary-color);
+}
+
+/* ===== 버튼 (폼 안에 포함됨) ===== */
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.9rem;
+  width: 100%;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #3c4a5e;
+}
