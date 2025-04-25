@@ -22,10 +22,11 @@ body {
 
 /* 레이아웃 */
 .wrap {
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  min-height: 100vh;
+  /* ✅ 100vh를 min-height로 바꾸는 것이 핵심 */
+  /* overflow: hidden; ❌ 제거 (footer 가려질 수 있음) */
 }
 
 .container {
@@ -33,7 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 0;
-  /* 중요: main이 넘칠 때 제대로 동작하게 */
+  /* main이 정상적으로 확장되게 */
 }
 
 main {
