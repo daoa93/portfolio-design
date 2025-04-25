@@ -1,0 +1,8 @@
+//공통 스타일
+@use "reset";
+@use "common";
+
+//각 페이지별 스타일
+@use "profile";
+@use "join";
+@use "login";

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
-/* ===== 프로필 영역 ===== */
+// ===== 프로필 영역 =====
 .profile-container {
   display: flex;
   max-width: 1200px;
@@ -42,7 +42,7 @@
   flex: 2;
 }
 
-/* ===== 인포 박스 (2x2 그리드) ===== */
+// ===== 인포 박스 (2x2 그리드) =====
 .info-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -73,15 +73,17 @@
   margin-bottom: 1rem;
 }
 
-/* ===== 스킬 바 ===== */
-.skill-bars li {
-  margin: 0.5rem 0;
-}
+// ===== 스킬 바 =====
+.skill-bars {
+  li {
+    margin: 0.5rem 0;
+  }
 
-.skill-bars span {
-  display: block;
-  margin-bottom: 0.3rem;
-  font-weight: 500;
+  span {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+  }
 }
 
 .bar {
@@ -90,32 +92,32 @@
   border-radius: 5px;
   overflow: hidden;
   position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    transition: width 0.5s ease;
+  }
+
+  &-design::after {
+    width: 90%;
+  }
+
+  &-web::after {
+    width: 70%;
+  }
+
+  &-office::after {
+    width: 50%;
+  }
 }
 
-.bar::after {
-  content: '';
-  position: absolute;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--primary-color);
-  border-radius: 5px;
-  transition: width 0.5s ease;
-}
-
-.bar-design::after {
-  width: 90%;
-}
-
-.bar-web::after {
-  width: 70%;
-}
-
-.bar-office::after {
-  width: 50%;
-}
-
-/* 📱 모바일 (≤767px) */
+// 📱 모바일 (≤767px)
 @media (max-width: 767px) {
   .profile-container {
     flex-direction: column;
@@ -136,7 +138,7 @@
   }
 }
 
-/* 💻 태블릿 (768px ~ 1024px) */
+// 💻 태블릿 (768px ~ 1024px)
 @media (min-width: 768px) and (max-width: 1024px) {
   .profile-container {
     flex-direction: column;
